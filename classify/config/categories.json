@@ -1,0 +1,102 @@
+{
+    "DRIVERS_LICENSE": {
+        "display_name": "Drivers License",
+        "id": 1,
+        "size": "Card"
+    },
+    "PASSPORT": {
+        "display_name": "Passport",
+        "id": 2,
+        "size": "Booklet"
+    },
+    "SOCIAL_SECURITY_CARD": {
+        "display_name": "Social Security Card",
+        "id": 3,
+        "size": "Card"
+    },
+    "MARRIAGE_CERTIFICATE": {
+        "display_name": "Marriage Certificate",
+        "id": 4,
+        "size": "Page"
+    },
+    "BIRTH_CERTIFICATE": {
+        "display_name": "Birth Certificate",
+        "id": 5,
+        "size": "Page"
+    },
+    "I797": {
+        "display_name": "I-797",
+        "id": 6,
+        "size": "Page"
+    },
+    "I129": {
+        "display_name": "I-129",
+        "id": 7,
+        "size": "Page"
+    },
+    "I140": {
+        "display_name": "I-140",
+        "id": 8,
+        "size": "Page"
+    },
+    "I485": {
+        "display_name": "I-485 Application",
+        "id": 9,
+        "size": "Page"
+    },
+    "OPT_CARD": {
+        "display_name": "OPT Card",
+        "id": 10,
+        "size": "Card"
+    },
+    "EAD_CARD": {
+        "display_name": "EAD Card",
+        "id": 11,
+        "size": "Card"
+    },
+    "GREEN_CARD": {
+        "display_name": "Green Card",
+        "id": 12,
+        "size": "Card"
+    },
+    "I693_IMMIGRATION_MEDICAL_EVALUATION_RECORD": {
+        "display_name": "I693 IMMIGRATION MEDICAL EVAL",
+        "id": 13,
+        "size": "Page"
+    },
+    "1099_MISC": {
+        "display_name": "1099 MISC",
+        "id": 14,
+        "size": "Page"
+    },
+    "W4": {
+        "display_name": "W4",
+        "id": 15,
+        "size": "Page"
+    },
+    "W9": {
+        "display_name": "W9",
+        "id": 16,
+        "size": "Page"
+    },
+    "3582" :{
+        "display_name" : "Form 3582",
+        "id" : 17,
+        "size" : "Page"
+    },
+    "8879" :{
+        "display_name" : "Form 8879",
+        "id" : 18,
+        "size" : "Page"
+    },
+    "I9_FORM" :{
+        "display_name" : "I9 Form",
+        "id" : 19,
+        "size" : "Page"
+    },
+    "1098_MORTGAGE_INTEREST_STATEMENT": {
+        "display_name": "1098",
+        "id": 20,
+        "size": "Page"
+    }
+}

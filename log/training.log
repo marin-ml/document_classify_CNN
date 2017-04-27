@@ -3,3 +3,4 @@
 27/Apr/2017 11:15:13    Total count of training data : 3324
 27/Apr/2017 11:15:14  Training data ...
 27/Apr/2017 11:15:45    step: 0, cost: 65.801630, accuracy: 41.76
+27/Apr/2017 11:19:48    step: 10, cost: 11.233652, accuracy: 41.76

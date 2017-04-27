@@ -1,0 +1,32 @@
+{
+  "DRIVERS_LICENSE": {
+    "keywords": {
+      "Driver License": 5,
+      "Driver": 2,
+      "License": 2
+    }
+  },
+  "PASSPORT": {
+    "keywords": {
+      "Passport": 3,
+      "<<<<": 1
+    }
+  },
+  "ACCOUNT_PAYABLE_INVOICE": {
+    "keywords": {
+      "Invoice": 5,
+      "Amount": 1,
+      "Due": 1,
+      "Total": 1,
+      "Original": 1,
+      "Summary": 1
+    }
+  },
+  "BUSINESS_RECEIPT": {
+    "keywords": {
+      "Total": 1,
+      "Amount": 1,
+      "Receipt": 1
+    }
+  }
+}

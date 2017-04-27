@@ -4,3 +4,4 @@ image_real/
 test.py
 training
 models/c*
+log

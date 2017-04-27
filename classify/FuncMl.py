@@ -5,8 +5,6 @@ import cv2
 from wand.image import Image
 import json
 import os
-import ConfigParser
-import ast
 try:
     import tensorflow as tf
 except ImportError:
@@ -18,6 +16,7 @@ class FuncMl:
     def __init__(self):
         # Constructor for the class
         self.my_dir = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+        self.categories = 20
 
     def load_standard_base_documents_json(self):
         """
@@ -101,17 +100,14 @@ class FuncMl:
         """ --------------------- Configuration of CNN model ------------------------ """
         tf.reset_default_graph()
 
-        config = ConfigParser.RawConfigParser()
-        config.read(os.path.join(self.my_dir, "config/CNN_model.cfg"))
+        X = tf.placeholder("float", [None, 224, 224, 1])
+        Y = tf.placeholder("float", [None, self.categories])
 
-        X = tf.placeholder("float", ast.literal_eval(config.get('model', 'X')))
-        Y = tf.placeholder("float", ast.literal_eval(config.get('model', 'Y')))
-
-        w1 = self.init_weights(ast.literal_eval(config.get('model', 'w1')))     # 3x3x1 conv, 16 outputs
-        w2 = self.init_weights(ast.literal_eval(config.get('model', 'w2')))     # 3x3x16 conv, 32 outputs
-        w3 = self.init_weights(ast.literal_eval(config.get('model', 'w3')))     # 3x3x32 conv, 64 outputs
-        w4 = self.init_weights(ast.literal_eval(config.get('model', 'w4')))     # 64*10*10 input, 2000 outputs
-        w5 = self.init_weights(ast.literal_eval(config.get('model', 'w5')))     # 2000 inputs, 1000 outputs (labels)
+        w1 = self.init_weights([3, 3, 1, 16])               # 3x3x1 conv, 16 outputs
+        w2 = self.init_weights([3, 3, 16, 32])              # 3x3x16 conv, 32 outputs
+        w3 = self.init_weights([3, 3, 32, 64])              # 3x3x32 conv, 64 outputs
+        w4 = self.init_weights([6400, 1024])                # 64*10*10 input, 1024 outputs
+        w5 = self.init_weights([1024, self.categories])     # 1024 inputs, 20 outputs (labels)
 
         p_keep_con = tf.placeholder("float")
         p_keep_hidden = tf.placeholder("float")

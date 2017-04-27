@@ -33,7 +33,7 @@ def load_training_data(path):
                 image_data = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)
                 training_data = image_data.reshape(224, 224, 1)
                 train_data_x.append(training_data)
-                train_data_y.append(func_class.expand(cat_id[cat_index], 1000))
+                train_data_y.append(func_class.expand(cat_id[cat_index], func_class.categories))
 
     log_print("  Total count of Categories    : " + str(cat_count))
     log_print("  Total count of training data : " + str(len(train_data_x)))

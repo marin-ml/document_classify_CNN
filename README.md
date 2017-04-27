@@ -82,3 +82,4 @@ This project have 6 python files and 1 xls files.
             python image_classify.py ./source/Passports/1.jpg
             python image_classify.py ./source/Global\ Entry/1.jpg
             python image_classify.py ./source/SSC
+

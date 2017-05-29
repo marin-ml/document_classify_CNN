@@ -41,7 +41,7 @@ def load_training_data(path):
 
 
 def log_print(info_str):
-    print info_str
+    print(info_str)
     logging.info(info_str)
 
 
@@ -115,6 +115,6 @@ for step_i in range(step + 1):
         log_print('  %s: %d, %s: %f, %s: %.2f' % ("step", step_i, "cost", cost, "accuracy", acc * 100))
         saver.save(sess, model_name)
     else:
-        print "  step:", step_i
+        print("  step:", step_i)
 
 print ("Optimization Finished!")

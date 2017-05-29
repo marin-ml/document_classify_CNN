@@ -44,13 +44,13 @@ def convert_image(train_path, src_file, src_join):
         img = func_class.load_convert_image(img_src)
 
         if img is not None:
-            print "Converting", src_join[i]
+            print("Converting", src_join[i])
 
             # Rotate original image
             image_rotate_save(img, train_path[i] + '/' + src_file[i][:-4] + str(i) + '_0_')
 
         else:
-            print "Converting", src_join[i], "Invalid Image Format!"
+            print("Converting", src_join[i], "Invalid Image Format!")
 
 if __name__ == '__main__':
     """ -------------------------- Input argument process ---------------------------- """

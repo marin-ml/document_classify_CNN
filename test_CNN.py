@@ -34,13 +34,13 @@ if __name__ == '__main__':
         if ret:
             if ret[0]['name'] == img_cat[i] and ret[0]['score'] > test_threshold:
                 ret_table[img_cat[i]][0] += 1
-                print file_image, ret[0], "Right!"
+                print(file_image, ret[0], "Right!")
             else:
                 ret_table[img_cat[i]][1] += 1
-                print file_image, ret[0], "Wrong!"
+                print(file_image, ret[0], "Wrong!")
         else:
             ret_table[img_cat[i]][2] += 1
-            print file_image, "Incorrect image format!"
+            print(file_image, "Incorrect image format!")
 
     # print ret_table
     func_class.display_test_result(ret_table)

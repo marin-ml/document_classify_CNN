@@ -15,4 +15,4 @@ if __name__ == '__main__':
     classify_class = ImageClassify('models/classify_CNN')
 
     # classify_class.classify_print(src_name)
-    print classify_class.classify(src_name)
+    print(classify_class.classify(src_name))

@@ -3,17 +3,16 @@ http://code.google.com/p/pytesser/
 by Michael J.T. O'Kelly
 V 0.0.1, 3/10/07"""
 
-from PIL import Image
 import cv2
 import subprocess
-from OCRUtil import OCRUtil
-from OCRErrors import OCRErrors
-from OCRErrors import Tesser_General_Exception
+from .OCRUtil import OCRUtil
+from .OCRErrors import OCRErrors
+from .OCRErrors import Tesser_General_Exception
 import os
 import json
 import numpy as np
 from datetime import datetime
-from FuncMl import FuncMl
+from .FuncMl import FuncMl
 
 
 class OCRClassify:
@@ -136,8 +135,8 @@ class OCRClassify:
                 cats, _, cat_ids = self.func_ml.load_standard_base_documents_json()
                 ocr_cat_ids = []
 
-                for j in xrange(key_categories.__len__()):
-                    for i in xrange(cat_ids.__len__()):
+                for j in range(key_categories.__len__()):
+                    for i in range(cat_ids.__len__()):
                         if cats[i] == key_categories[j]:
                             ocr_cat_ids.append(cat_ids[i])
                             break
@@ -167,9 +166,9 @@ class OCRClassify:
                 n = min(min_cnt, comb_acc.__len__())
             for j in range(n):
                 if comb_acc[j][0] > 1:
-                    print "   ", '{:20}'.format(comb_acc[j][1]), ':', "%2.6f" % comb_acc[j][0]
+                    print("   ", '{:20}'.format(comb_acc[j][1]), ':', "%2.6f" % comb_acc[j][0])
         else:
-            print comb_acc
+            print(comb_acc)
 
     def classify(self, input_filename, min_cnt=None):
         """

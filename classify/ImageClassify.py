@@ -1,6 +1,6 @@
 
 import numpy as np
-from FuncMl import FuncMl
+from .FuncMl import FuncMl
 import os
 from datetime import datetime
 try:
@@ -87,9 +87,9 @@ class ImageClassify:
                 
             for j in range(n):
                 if comb_acc[j][0] > 1:
-                    print "   ", '{:20}'.format(comb_acc[j][1]), ':', "%2.6f" % comb_acc[j][0]
+                    print("   ", '{:20}'.format(comb_acc[j][1]), ':', "%2.6f" % comb_acc[j][0])
         else:
-            print "Incorrect file name or image format!"
+            print("Incorrect file name or image format!")
 
     def classify(self, input_name, min_cnt=None):
         comb_acc = self.__classify(input_name)

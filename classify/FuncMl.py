@@ -176,8 +176,8 @@ class FuncMl:
         """
             Calculate the accuracy and display the result data
         """
-        print ""
-        print "  Category               Right    Wrong  NoDetect   Accuracy"
+        print("")
+        print("  Category               Right    Wrong  NoDetect   Accuracy")
         for key in result.keys():
             if len(key) < 20:
                 display1 = '{:<20}'.format(key)
@@ -189,4 +189,4 @@ class FuncMl:
             acc_str = '{:.2%}'.format(float(result[key][0])/(result[key][0]+result[key][1]+result[key][2]))
             # acc_str = '{:.2%}'.format(float(result[key][0])/(result[key][0]+result[key][1]))
             display5 = '{:>12}'.format(acc_str)
-            print display1, display2, display3, display4, display5
+            print(display1, display2, display3, display4, display5)
